@@ -1,12 +1,20 @@
 import "./App.css";
-import Button from "./Button";
-import Greeting from "./Greeting";
 import Profilecard from "./ProfileCard";
 
 function App() {
+  const userProfile = {
+    name: "Alex",
+    role: "Frontend Dev",
+    bio: "Passionate about building beautiful user interfaces.",
+  };
+
   return (
     <div>
-      <Profilecard />
+      <Profilecard
+        name={userProfile.name}
+        role={userProfile.role}
+        bio={userProfile.bio}
+      />
     </div>
   );
 }

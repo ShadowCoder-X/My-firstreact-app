@@ -21,14 +21,15 @@
 }
 
 .profile-card {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   justify-content: center;
 }
 
 .profile-img {
   border: 1px solid #5a5b5b;
   border-radius: 50%;
+  width: 10%;
 }
 
 .img {
