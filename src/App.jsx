@@ -1,6 +1,8 @@
 import "./App.css";
 import Button from "./Button";
 import Greeting from "./Greeting";
+import pic from "./assets/image/pic26.jpeg";
+
 //Component 2 - Parent component
 function App() {
   const firstName = "Omorh";
@@ -16,6 +18,8 @@ function App() {
       <Greeting name="Precious" age="28" />
       <h2>This is my application</h2>
       <Button name={firstName} age={age} />
+
+      <img src={pic} alt="" width="600vw" height="600vh" />
     </div>
   );
 }
