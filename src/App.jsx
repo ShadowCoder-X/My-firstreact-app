@@ -2,6 +2,7 @@ import "./App.css";
 import Button from "./Button";
 import Greeting from "./Greeting";
 import pic from "./assets/image/pic26.jpeg";
+import Profilecard from "./Profilecard";
 
 //Component 2 - Parent component
 function App() {
@@ -19,10 +20,13 @@ function App() {
       <h2>This is my application</h2>
       <Button name={firstName} age={age} />
 
+      <Profilecard />
       <img src={pic} alt="" width="600vw" height="600vh" />
     </div>
   );
 }
+
+<Profilecard />;
 
 export default App;
 
