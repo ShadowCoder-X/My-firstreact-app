@@ -1,18 +1,6 @@
 import "./App.css";
 import Button from "./Button";
-
-//Component 1
-function Greeting({ name, age }) {
-  //const { name, age } = props;
-  // console.log(props);
-  return (
-    <div>
-      <h1>Hello, {name}</h1>
-      <p>I am {age} years old</p>
-    </div>
-  );
-}
-
+import Greeting from "./Greeting";
 //Component 2 - Parent component
 function App() {
   const firstName = "Omorh";
