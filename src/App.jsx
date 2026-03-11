@@ -1,18 +1,14 @@
 import "./App.css";
-import Profilecard from "./ProfileCard";
+import profilePics from "./assets/image/pic13.jpeg";
+import ProfileCard from "./ProfileCard";
+import Button from "./Button";
 
 function App() {
-  // const userProfile = {
-  //   name: "Alex",
-  //   pic: profilePics,
-  //   role: "Frontend Dev",
-  //   bio: "Passionate about building beautiful user interfaces.",
-  // };
-
   const users = [
     {
       id: 1,
-      pic: "profilePics",
+      name: "Mark",
+      pic: profilePics,
       role: "Frontend Dev",
       bio: "Passionate about building beautiful user interfaces.",
     },
@@ -20,7 +16,7 @@ function App() {
     {
       id: 2,
       name: "Bello",
-      pic: "profilePics",
+      pic: profilePics,
       role: "Backend Dev",
       bio: "Passionate about building beautiful user interfaces.",
     },
@@ -28,14 +24,25 @@ function App() {
     {
       id: 3,
       name: "Feyi",
-      pic: "profilePics",
+      pic: profilePics,
       role: "DevOps",
       bio: "Passionate about building beautiful user interfaces.",
     },
   ];
 
+  //const numbers = [1, 2, 3, 4, 5];
+  const techSkills = ["HTML", "CSS", "REACT", "JAVASCRIPT"];
+
   return (
     <div>
+      <Button>Load Users</Button>
+
+      <ol listStyle>
+        {techSkills.map((tech, index) => {
+          return <li key={index}>{tech}</li>;
+        })}
+      </ol>
+
       {/* {
         users.map[
           function (user, ind) {
@@ -51,21 +58,19 @@ function App() {
             );
           }]} */}
 
-      {
-        users.map[
-          (user) => {
-            return (
-              <ProfileCard
-                key={user.id}
-                name={user.name}
-                pic={user.pic}
-                role={user.role}
-                bio={user.bio}
-              />
-            );
-          }
-        ]
-      }
+      {users.map((user) => {
+        return (
+          <ProfileCard
+            key={user.id}
+            name={user.name}
+            pic={user.pic}
+            {...user}
+          />
+        );
+      })}
+
+      <Button>Click Me</Button>
+
       {/*<Profilecard
         name={userProfile.name}
         pic={userProfile.pic}

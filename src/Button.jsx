@@ -1,9 +1,10 @@
 import React from "react";
 
-function Button(props) {
+function Button({ children, name }) {
+  console.log(children);
   return (
     <div>
-      <button className="pry-btn">This is {props.name} button </button>
+      <button className="pry-btn">{children}</button>
     </div>
   );
 }
