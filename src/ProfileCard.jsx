@@ -1,9 +1,9 @@
 //import React from "react";
 import ProfilePics from "./assets/image/pic13.jpeg";
 
-const ProfileCard = (props) => {
-  console.log(props);
-  const { name, pic, role, bio } = props;
+const ProfileCard = (name, role, pic, bio) => {
+  //console.log(props);
+  //const { name, role, pic, bio } = props;
 
   return (
     <div className="profile">
