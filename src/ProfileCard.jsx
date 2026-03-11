@@ -1,23 +1,23 @@
 //import React from "react";
-import profilePics from "./assets/image/pic13.jpeg";
+import ProfilePics from "./assets/image/pic13.jpeg";
 
 const ProfileCard = (props) => {
   console.log(props);
-  const {} = props;
+  const { name, pic, role, bio } = props;
 
   return (
     <div className="profile">
       <div className="profile-card">
         {/* Profile-pix */}
         <div className="img">
-          <img src={profilePics} alt="profile image" className="profile-img" />
+          <img src={pic} alt={name} className="profile-img" />
         </div>
 
-        <h3 className="name-tag"> Name: Markay</h3>
+        <h3 className="name-tag"> Name: {name}</h3>
 
-        <p className="bio-tag">
-          Passionate about building beautiful user interfaces.
-        </p>
+        <p className="role-tag"> Bio: {role}</p>
+
+        <p className="bio-tag"> Bio: {bio}</p>
       </div>
     </div>
   );
